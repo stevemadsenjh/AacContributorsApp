@@ -5,6 +5,7 @@
     <string name="format_network_error">Check network connectivity (%1$s)</string>
     <string name="label_login">Login</string>
     <string name="label_contributions">Contributions</string>
+    <string name="label_github_page">github page</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,5 +14,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Contributors</string>
+    <string name="menu_contributor_details">Contributor</string>
+    <string name="menu_github_page">Github page</string>
 </resources>

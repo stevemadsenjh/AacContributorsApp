@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/nav_contributor_detail"
         android:name="com.example.yumemi.app.ui.contributor.ContributorDetailFragment"
-        android:label="ContributorDetailFragment"
+        android:label="@string/menu_contributor_details"
         tools:layout="@layout/fragment_contributor_details">
         <argument
             android:name="avatarUrl"
@@ -29,5 +29,20 @@
         <argument
             android:name="contributions"
             app:argType="integer" />
+        <argument
+            android:name="githubUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_contributor_detail_to_nav_webview"
+            app:destination="@id/nav_webview" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_webview"
+        android:name="com.example.yumemi.app.ui.WebViewFragment"
+        android:label="@string/menu_github_page"
+        tools:layout="@layout/fragment_webview">
+        <argument
+            android:name="url"
+            app:argType="string" />
     </fragment>
 </navigation>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.yumemi.app.R
@@ -29,5 +30,12 @@ class ContributorDetailFragment : Fragment() {
             .load(args.avatarUrl).into(imageViewAvatar)
         textViewLogin.text = args.login
         textViewContributions.text = args.contributions.toString()
+
+        textViewButtonGithubPage.setOnClickListener {
+            findNavController().navigate(ContributorDetailFragmentDirections.actionNavContributorDetailToNavWebview(
+                args.githubUrl
+            ))
+
+        }
     }
 }

@@ -36,7 +36,8 @@ class ContributorsAdapter(val fragment: Fragment, private val myDataset: Array<C
                 HomeFragmentDirections.actionNavHomeToNavContributorDetail(
                     myDataset[position].avatar_url,
                     myDataset[position].login,
-                    myDataset[position].contributions
+                    myDataset[position].contributions,
+                    myDataset[position].html_url
                 )
             )
         }
