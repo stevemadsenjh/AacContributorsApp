@@ -22,11 +22,6 @@ class HomeViewModel(val activity: FragmentActivity) : ViewModel() {
             contributors_.postValue(respObj)
         }
     }
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
 }
 
 class HomeViewModelFactory(private val activity: FragmentActivity) :

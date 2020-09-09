@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">YumemiTest</string>
 
+    <string name="label_home_title">Contributors to\nandroid-architecture-components</string>
     <string name="format_network_error">Check network connectivity (%1$s)</string>
     <string name="label_login">Login</string>
     <string name="label_contributions">Contributions</string>
