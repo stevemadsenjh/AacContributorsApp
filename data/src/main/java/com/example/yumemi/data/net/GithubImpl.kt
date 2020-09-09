@@ -20,8 +20,8 @@ class GithubImpl {
 
     suspend fun contributors(): GithubRespBase {
         return try {
-            val recipeResp = iGithubSvc.contributors()
-            GithubRespOK(recipeResp)
+            val respObj = iGithubSvc.contributors()
+            GithubRespOK(respObj)
         } catch (e: Exception) {
             val msg = "ERROR (${e.javaClass.simpleName}): ${e.localizedMessage}"
             Log.e(TAG, "")

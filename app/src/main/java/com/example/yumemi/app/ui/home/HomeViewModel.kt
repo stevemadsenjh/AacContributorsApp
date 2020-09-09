@@ -9,6 +9,20 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(val activity: FragmentActivity) : ViewModel() {
 
+    private val loading_ = MutableLiveData<Unit>()
+    val loading: LiveData<Unit> = loading_
+    private val contributors_ = MutableLiveData<GithubRespBase>()
+    val contributors: LiveData<GithubRespBase> = contributors_
+
+    private val githubImpl = GithubImpl()
+    fun requestContributors() {
+        loading_.postValue(Unit)
+        viewModelScope.launch {
+            val respObj = githubImpl.contributors()
+            contributors_.postValue(respObj)
+        }
+    }
+
     private val _text = MutableLiveData<String>().apply {
         value = "This is home Fragment"
     }

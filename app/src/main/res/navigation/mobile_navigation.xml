@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.yumemi.app.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_contributor_detail"
+            app:destination="@id/nav_contributor_detail" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,20 @@
         android:name="com.example.yumemi.app.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_contributor_detail"
+        android:name="com.example.yumemi.app.ui.contributor.ContributorDetailFragment"
+        android:label="ContributorDetailFragment"
+        tools:layout="@layout/fragment_contributor_details">
+        <argument
+            android:name="avatarUrl"
+            app:argType="string" />
+        <argument
+            android:name="login"
+            app:argType="string" />
+        <argument
+            android:name="contributions"
+            app:argType="integer" />
+    </fragment>
 </navigation>
